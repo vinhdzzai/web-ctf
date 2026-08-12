@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travelly - Tour nổi bật</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body class="books-page">
+    <!-- The previous developer left a file backup.<something> behind. Maybe it is still useful. -->
+    <div class="books-shell">
+      <header class="books-header">
+        <div>
+          <p class="eyebrow">Travelly</p>
+          <h1>Tour hấp dẫn cho cuối tuần</h1>
+          <p>Khám phá những chuyến đi đẹp, thư giãn và dễ đặt lịch.</p>
+          <form action="/search" method="get" style="margin-top: 12px">
+            <input
+              name="q"
+              placeholder="Tìm tour theo tên..."
+              style="
+                padding: 8px 10px;
+                border: 1px solid #d9e4ea;
+                border-radius: 6px;
+                width: 220px;
+              "
+            />
+            <button
+              type="submit"
+              style="
+                padding: 8px 10px;
+                margin-left: 8px;
+                border: none;
+                background: var(--primary);
+                color: white;
+                border-radius: 6px;
+              "
+            >
+              Tìm
+            </button>
+          </form>
+        </div>
+        <a class="back-link" href="/travel">← Quay lại</a>
+      </header>
+
+      <section class="books-hero">
+        <div>
+          <span class="pill">Mùa hè 2026</span>
+          <h2>Ưu đãi đặc biệt cho khách đầu tiên</h2>
+          <p>
+            Những điểm đến được yêu thích, hình ảnh đẹp và trải nghiệm đáng nhớ.
+          </p>
+        </div>
+      </section>
+
+      <section class="tour-grid">
+        <article class="tour-card">
+          <img class="tour-img" data-path="da-nang.jpg" alt="Tour Đà Nẵng" />
+          <div class="tour-card__body">
+            <h3>Đà Nẵng - Hội An - Bà Nà</h3>
+            <p>
+              3 ngày 2 đêm, bãi biển đẹp, ẩm thực địa phương và đêm Hội An lung
+              linh.
+            </p>
+            <div class="tour-meta">
+              <span>3 ngày</span>
+              <span>Khởi hành mỗi cuối tuần</span>
+            </div>
+            <button type="button" class="tour-btn" disabled>Đặt vé</button>
+          </div>
+        </article>
+
+        <article class="tour-card">
+          <img
+            class="tour-img"
+            data-path="ninh-binh.jpg"
+            alt="Tour Ninh Bình"
+          />
+          <div class="tour-card__body">
+            <h3>Ninh Bình - Tràng An - Hang Múa</h3>
+            <p>
+              2 ngày 1 đêm, cảnh đẹp như tranh vẽ và trải nghiệm chèo thuyền đầy
+              thú vị.
+            </p>
+            <div class="tour-meta">
+              <span>2 ngày</span>
+              <span>Phù hợp gia đình</span>
+            </div>
+            <button type="button" class="tour-btn" disabled>Đặt vé</button>
+          </div>
+        </article>
+
+        <article class="tour-card">
+          <img class="tour-img" data-path="sapa.jpg" alt="Tour Sapa" />
+          <div class="tour-card__body">
+            <h3>Sapa - Fansipan - Bản Cát Cát</h3>
+            <p>
+              4 ngày 3 đêm, núi mây, cánh đồng bậc thang và không khí se lạnh
+              mát rượi.
+            </p>
+            <div class="tour-meta">
+              <span>4 ngày</span>
+              <span>Khởi hành tháng 8</span>
+            </div>
+            <button type="button" class="tour-btn" disabled>Đặt vé</button>
+          </div>
+        </article>
+      </section>
+      <a href="/hidden.html" hidden></a>
+
+      <script>
+        document.querySelectorAll(".tour-img").forEach((img) => {
+          const imageName = img.getAttribute("data-path");
+          img.src = "/image?img=" + imageName; // download just image .jpg from server
+        });
+      </script>
+    </div>
+  </body>
+</html>

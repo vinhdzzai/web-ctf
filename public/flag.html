@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Flag Page</title>
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="/flag.css" />
+  </head>
+  <body class="plain">
+    <main class="flag-shell">
+      <section class="flag-card">
+        <h1>Flag Submissions</h1>
+        <p class="subtitle">Nhập flag đúng để xác nhận từng mục.</p>
+
+        <form
+          class="flag-form"
+          id="flagForm1"
+          action="/flag/submit"
+          method="post"
+        >
+          <div class="flag-row">
+            <div class="label-row">
+              <label for="flag1">Flag 1</label>
+              <span class="status-indicator" aria-hidden="true"></span>
+            </div>
+            <input
+              id="flag1"
+              name="flagInput"
+              type="text"
+              autocomplete="off"
+              placeholder="Nhập Flag 1"
+              required
+            />
+            <input type="hidden" name="flagIndex" value="1" />
+            <button type="submit">Submit</button>
+            <p class="flag-feedback" aria-live="polite"></p>
+          </div>
+        </form>
+
+        <form
+          class="flag-form"
+          id="flagForm2"
+          action="/flag/submit"
+          method="post"
+        >
+          <div class="flag-row">
+            <div class="label-row">
+              <label for="flag2">Flag 2</label>
+              <span class="status-indicator" aria-hidden="true"></span>
+            </div>
+            <input
+              id="flag2"
+              name="flagInput"
+              type="text"
+              autocomplete="off"
+              placeholder="Nhập Flag 2"
+              required
+            />
+            <input type="hidden" name="flagIndex" value="2" />
+            <button type="submit">Submit</button>
+            <p class="flag-feedback" aria-live="polite"></p>
+          </div>
+        </form>
+
+        <form
+          class="flag-form"
+          id="flagForm3"
+          action="/flag/submit"
+          method="post"
+        >
+          <div class="flag-row">
+            <div class="label-row">
+              <label for="flag3">Flag 3</label>
+              <span class="status-indicator" aria-hidden="true"></span>
+            </div>
+            <input
+              id="flag3"
+              name="flagInput"
+              type="text"
+              autocomplete="off"
+              placeholder="Nhập Flag 3"
+              required
+            />
+            <input type="hidden" name="flagIndex" value="3" />
+            <button type="submit">Submit</button>
+            <p class="flag-feedback" aria-live="polite"></p>
+          </div>
+        </form>
+      </section>
+    </main>
+    <script src="/flag.js"></script>
+  </body>
+</html>

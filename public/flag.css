@@ -1,0 +1,182 @@
+:root {
+  --flag-bg: #f7fbff;
+  --flag-panel: #ffffff;
+  --flag-border: #dce7f5;
+  --flag-primary: #1565c0;
+  --flag-primary-dark: #0d47a1;
+  --flag-text: #0f2f55;
+  --flag-muted: #607d8b;
+}
+
+.flag-shell {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: linear-gradient(180deg, #ffffff 0%, #e8f1ff 100%);
+}
+
+.flag-card {
+  width: min(560px, 100%);
+  padding: 36px 32px;
+  background: var(--flag-panel);
+  border: 1px solid var(--flag-border);
+  border-radius: 18px;
+  box-shadow: 0 24px 60px rgba(21, 101, 192, 0.12);
+}
+
+.flag-card h1 {
+  margin: 0 0 12px;
+  font-size: clamp(2rem, 2.5vw, 2.5rem);
+  color: var(--flag-primary);
+}
+
+.flag-card .subtitle {
+  margin: 0 0 28px;
+  color: var(--flag-muted);
+  line-height: 1.6;
+}
+
+.flag-form {
+  display: grid;
+  gap: 18px;
+  margin-bottom: 18px;
+}
+
+.flag-row {
+  display: grid;
+  gap: 10px;
+}
+
+.flag-row label {
+  font-size: 0.95rem;
+  color: var(--flag-text);
+  font-weight: 700;
+}
+
+.flag-row input[type="text"] {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid var(--flag-border);
+  border-radius: 10px;
+  font-size: 1rem;
+  color: var(--flag-text);
+  outline: none;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.flag-row input[type="text"]:focus {
+  border-color: var(--flag-primary);
+  box-shadow: 0 0 0 4px rgba(21, 101, 192, 0.12);
+}
+
+.flag-row button {
+  width: fit-content;
+  padding: 13px 20px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(
+    135deg,
+    var(--flag-primary),
+    var(--flag-primary-dark)
+  );
+  color: white;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.flag-row button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 12px 24px rgba(21, 101, 192, 0.22);
+}
+
+.label-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.status-indicator {
+  font-size: 0.95rem;
+  color: transparent;
+  transition: color 0.2s ease;
+}
+
+.flag-feedback {
+  margin: 0;
+  min-height: 1.25rem;
+  font-size: 0.95rem;
+}
+
+.flag-feedback.error {
+  color: #d32f2f;
+}
+
+.flag-feedback.success {
+  color: #1b5e20;
+}
+
+.flag-row.done .status-indicator {
+  color: #1b5e20;
+}
+
+.flag-row.done .status-indicator::before {
+  content: "✓";
+}
+
+.flag-row.done input {
+  background: #f2f9ff;
+  border-color: #a1c9ff;
+}
+
+.flag-row.done input:focus {
+  box-shadow: none;
+}
+
+.flag-row.done button {
+  opacity: 0.65;
+  cursor: default;
+  transform: none;
+}
+
+.flag-row.done button:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+.flag-row.done input,
+.flag-row.done button {
+  pointer-events: none;
+}
+
+.flag-row.done input {
+  background: #f2f9ff;
+  border-color: #a1c9ff;
+}
+
+.flag-row.done input:focus {
+  box-shadow: none;
+}
+
+.flag-row.done button {
+  opacity: 0.65;
+  cursor: default;
+  transform: none;
+}
+
+.flag-row.done .status-indicator {
+  color: #1b5e20;
+}
+
+@media (max-width: 520px) {
+  .flag-card {
+    padding: 28px 20px;
+  }
+}

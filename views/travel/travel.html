@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travelly - Hành trình của bạn</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <div class="travel-shell">
+      <section class="travel-hero">
+        <div class="travel-hero__content">
+          <p class="eyebrow">Travelly</p>
+          <h1>Hành trình mới đang chờ bạn</h1>
+          <p>
+            Quản lý điểm đến, ghi chú chuyến đi và bắt đầu những trải nghiệm
+            đáng nhớ.
+          </p>
+        </div>
+      </section>
+
+      <section class="travel-card">
+        <h2 id="welcome">Đang tải...</h2>
+        <p class="travel-card__subtitle">Thêm một mục vào hành trình của bạn</p>
+
+        <div class="travel-actions">
+          <input
+            type="text"
+            id="itemInput"
+            placeholder="Nhập địa điểm hoặc ý tưởng..."
+          />
+          <button id="btnAdd">Thêm</button>
+        </div>
+        <!-- RmxhZ3tGYWtlX0ZsYWdfQ29fTGVuX0VtX1RyYWl9== -->
+        <a class="back-link" href="/travel/books">Xem tour nổi bật</a>
+        <ul id="userList"></ul>
+        <button id="btnLogout">Đăng xuất</button>
+      </section>
+    </div>
+
+    <script src="/profile.js"></script>
+  </body>
+</html>

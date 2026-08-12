@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travelly - Đăng ký</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <section class="hero-panel">
+        <div class="hero-overlay">
+          <p class="eyebrow">Travelly</p>
+          <h1>Đăng ký để lên lịch cho những chuyến đi tiếp theo</h1>
+          <p>
+            Hãy bắt đầu hành trình của bạn với những ưu đãi và gợi ý độc đáo mỗi
+            ngày.
+          </p>
+        </div>
+      </section>
+
+      <section class="form-panel">
+        <h2>Đăng ký tài khoản</h2>
+        <p class="subtitle">Tạo tài khoản để bắt đầu</p>
+
+        <form id="registerForm" class="auth-form">
+          <input
+            type="text"
+            id="username"
+            placeholder="Tên đăng nhập"
+            required
+          />
+          <input
+            type="password"
+            id="password"
+            placeholder="Mật khẩu"
+            required
+          />
+          <button type="submit">Đăng ký</button>
+        </form>
+
+        <p class="switch-link"><a href="/login.html">Quay lại đăng nhập</a></p>
+        <p id="result"></p>
+      </section>
+    </div>
+
+    <script>
+      const form = document.querySelector("#registerForm");
+      const result = document.querySelector("#result");
+
+      form.addEventListener("submit", async (event) => {
+        event.preventDefault();
+        const username = document.querySelector("#username").value;
+        const password = document.querySelector("#password").value;
+
+        const res = await fetch("/register", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ username, password }),
+        });
+
+        const data = await res.json();
+        result.innerText = data.message;
+
+        if (res.ok) {
+          window.location.href = "/login.html";
+        }
+      });
+    </script>
+  </body>
+</html>

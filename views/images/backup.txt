@@ -1,0 +1,19 @@
+commit 7f3a91c
+Author: manager
+Date: 2026-07-28
+
+    update travel images
+
+Replaced the old destination images with the new summer collection.
+
+Notes:
+- da-nang.jpg
+- ninh-binh.jpg
+- sapa.jpg
+
+One file was moved out of the images directory during the cleanup.
+
+The manager asked me to keep a copy at the root:
+    secrettt.jpg
+
+Don't include it in the public tour listing.
