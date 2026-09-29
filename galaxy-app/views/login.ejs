@@ -1,0 +1,28 @@
+<%- include('partials/head', { title: 'Galaxy CTF / Login' }) %>
+<main class="shell">
+  <header class="masthead">
+    <p class="eyebrow">GALAXY CTF / OBSERVATORY NETWORK</p>
+    <h1>Restricted Access Terminal</h1>
+    <p class="subheading">Astronomy archive and challenge board</p>
+  </header>
+  <!-- Training account: astronaut / orbit123 -->
+  <section class="content">
+    <fieldset class="panel login-panel">
+      <legend>AUTHENTICATION</legend>
+      <p class="notice">Enter your assigned observatory account.</p>
+      <% if (error) { %><p class="error" role="alert"><%= error %></p><% } %>
+      <form method="post" action="/login">
+        <div class="form-row"><label for="username">Username</label><input id="username" name="username" autocomplete="username" required></div>
+        <div class="form-row"><label for="password">Password</label><input id="password" name="password" type="password" autocomplete="current-password" required></div>
+        <button class="button" type="submit">Log in</button>
+      </form>
+    </fieldset>
+    <fieldset class="panel notice-panel">
+      <legend>SYSTEM NOTICE</legend>
+      <p>Authorized users only. Activity may be recorded for challenge administration.</p>
+      <p>Connection status: <strong class="online">ONLINE</strong></p>
+    </fieldset>
+  </section>
+  <footer class="footer">Galaxy CTF Network / build 0.2.0</footer>
+</main>
+</body></html>

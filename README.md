@@ -1,4 +1,15 @@
-#  Travell App
+# Web CTF Labs
+
+This repository contains two standalone educational CTF labs:
+
+- [travell-app](travell-app/) — the original web security lab.
+- [galaxy-app](galaxy-app/) — the astronomy-themed SSRF, SQL injection, and PDF export lab.
+
+Each application has its own setup instructions and dependencies.
+
+---
+
+# Travell App
 
 Một ứng dụng web **full-stack cơ bản** được xây dựng nhằm phục vụ mục đích học tập, tìm hiểu về kiến trúc ứng dụng web và luồng xử lý giữa **Client ↔ Server ↔ Database** chứ không chứng tỏ năng lực code.
 

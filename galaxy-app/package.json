@@ -1,0 +1,18 @@
+{
+  "name": "galaxy-ctf",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Isolated multi-stage astronomy web CTF challenge",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "ejs": "^3.1.10",
+    "express": "^4.21.2",
+    "express-session": "^1.18.1",
+    "sqlite3": "^6.0.1"
+  }
+}

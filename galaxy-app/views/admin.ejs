@@ -1,0 +1,23 @@
+<%- include('partials/head', { title: 'Galaxy CTF / Admin Export' }) %>
+<main class="shell">
+  <header class="masthead">
+    <span class="session">Administrator: <strong><%= username %></strong></span>
+    <p class="eyebrow">GALAXY CTF / ADMINISTRATION</p>
+    <h1>Observatory Report Export</h1>
+    <p class="subheading">Legacy document renderer / wkhtmltopdf</p>
+  </header>
+  <section class="content">
+    <fieldset class="panel admin-form">
+      <legend>HTML SOURCE</legend>
+      <p>Submit report markup to render a PDF document.</p>
+      <form method="post" action="/admin/export">
+        <label for="html">HTML</label>
+        <textarea id="html" name="html" spellcheck="false"><!doctype html>
+<html><body><h1>Observatory report</h1><p>Night shift summary.</p></body></html></textarea>
+        <button class="button" type="submit">Export PDF</button>
+      </form>
+    </fieldset>
+  </section>
+  <footer class="footer">Authorized admin session required</footer>
+</main>
+</body></html>

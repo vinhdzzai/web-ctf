@@ -1,0 +1,8 @@
+node_modules
+npm-debug.log*
+.git
+flag.txt
+store/*.sqlite
+store/*.sqlite-shm
+store/*.sqlite-wal
+tests

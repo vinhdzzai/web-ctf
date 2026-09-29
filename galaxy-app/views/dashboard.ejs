@@ -1,0 +1,22 @@
+<%- include('partials/head', { title: 'Galaxy CTF / Astronomy Archive' }) %>
+<main class="shell">
+  <header class="masthead">
+    <span class="session">Session: <strong><%= username %></strong></span>
+    <p class="eyebrow">GALAXY CTF / OBSERVATORY NETWORK</p>
+    <h1>Dashbroad: Astronomy Archive</h1>
+    <p class="subheading">Knowledge base / field notes / challenge briefings</p>
+  </header>
+  <!-- ops note: public GET /feed accepts feed=<url>. PUNX-1 console: http://127.0.0.1:3000/.
+       /health checks the station status. -->
+  <section class="content">
+    <fieldset class="panel">
+      <legend>RECENT ASTRONOMY POSTS</legend>
+      <% for (const article of articles) { %>
+        <article class="article"><p class="muted"><%= article.author %> / FIELD ARCHIVE</p><h2><%= article.title %></h2><p><%= article.summary %></p></article>
+      <% } %>
+    </fieldset>
+    <fieldset class="panel"><legend>OPERATOR NOTE</legend><p>Observatory records are synchronized from the station network.</p></fieldset>
+  </section>
+  <footer class="footer">SQLite archive online / authenticated as <%= username %></footer>
+</main>
+</body></html>
